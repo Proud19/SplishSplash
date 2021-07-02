@@ -13,6 +13,7 @@
 		FF2EEB8E268F689900F5A44B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2EEB8C268F689900F5A44B /* Main.storyboard */; };
 		FF2EEB90268F689B00F5A44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2EEB8F268F689B00F5A44B /* Assets.xcassets */; };
 		FF2EEB93268F689B00F5A44B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2EEB91268F689B00F5A44B /* LaunchScreen.storyboard */; };
+		FF2EEB9B268F9D6900F5A44B /* Splish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2EEB9A268F9D6900F5A44B /* Splish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF2EEB8F268F689B00F5A44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2EEB92268F689B00F5A44B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2EEB94268F689B00F5A44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2EEB9A268F9D6900F5A44B /* Splish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FF2EEB86268F689900F5A44B /* AppDelegate.swift */,
 				FF2EEB88268F689900F5A44B /* SceneDelegate.swift */,
 				FF2EEB8A268F689900F5A44B /* ViewController.swift */,
+				FF2EEB9A268F9D6900F5A44B /* Splish.swift */,
 				FF2EEB8C268F689900F5A44B /* Main.storyboard */,
 				FF2EEB8F268F689B00F5A44B /* Assets.xcassets */,
 				FF2EEB91268F689B00F5A44B /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				FF2EEB8B268F689900F5A44B /* ViewController.swift in Sources */,
 				FF2EEB87268F689900F5A44B /* AppDelegate.swift in Sources */,
 				FF2EEB89268F689900F5A44B /* SceneDelegate.swift in Sources */,
+				FF2EEB9B268F9D6900F5A44B /* Splish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QUP2TJ8JWM;
 				INFOPLIST_FILE = "Splish Splash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QUP2TJ8JWM;
 				INFOPLIST_FILE = "Splish Splash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
