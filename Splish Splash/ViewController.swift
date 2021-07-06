@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let touchPoint = touch.location(in: self.view)
         let pulse = Splish(numberOfPulses: 1, radius: 130, position: touchPoint)
         pulse.animationDuration = 2
-        pulse.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        pulse.backgroundColor = randomColor()
         touch.view?.layer.insertSublayer(pulse, above: touch.view?.layer)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.makeSplash(touchPoint: touchPoint, splishRadius: 130, view: touch.view!)
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         let minDistance = Float(60.0)
         let numCircles = Int.random(in: 2...5)
         for _ in 0..<numCircles {
+            
+            // generating random value circle center and radius
             var d_x = CGFloat(Float.random(in: minDistance...maxDistance))
             var d_y = CGFloat(Float.random(in: minDistance...maxDistance))
             let decider_x = Float.random(in: 0...1)
@@ -53,10 +55,23 @@ class ViewController: UIViewController {
             
             let pulse = Splish(numberOfPulses: 1, radius: radius, position: d_point)
             pulse.animationDuration = 2
-            pulse.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            pulse.backgroundColor = randomColor()
             view.layer.insertSublayer(pulse, above: view.layer)
            
         }
+    }
+    
+    func randomColor() -> CGColor {
+        var floatRandom: CGFloat {
+            CGFloat(Float.random(in: 0...1))
+        }
+        
+        let color = CGColor(red: floatRandom,
+                            green: floatRandom,
+                            blue: floatRandom,
+                            alpha: 1)
+        return color
+        
     }
 }
 
