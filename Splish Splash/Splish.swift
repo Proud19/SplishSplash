@@ -14,10 +14,10 @@ import UIKit
 
 class Splish: CALayer {
     
-    var animationGroup = CAAnimationGroup()
-    var animationDuration: TimeInterval = 2
-    var radius: CGFloat = 200
-    var numberOfPulses: CGFloat = 10
+    fileprivate var animationGroup = CAAnimationGroup()
+    fileprivate var animationDuration: TimeInterval = 2
+    fileprivate var radius: CGFloat = 200
+    fileprivate var numberOfPulses: CGFloat = 10
     
     override init(layer: Any) {
         super.init(layer: layer)
@@ -29,7 +29,6 @@ class Splish: CALayer {
     
     init(numberOfPulses: CGFloat = 2, radius: CGFloat, position: CGPoint) {
         super.init()
-        self.backgroundColor = UIColor.black.cgColor
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0
         self.radius = radius
@@ -47,7 +46,7 @@ class Splish: CALayer {
         }
     }
     
-    func scaleAnimation() -> CABasicAnimation {
+    var scaleAnimation: CABasicAnimation {
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
         scaleAnimation.fromValue = NSNumber(value: 0)
         scaleAnimation.toValue = NSNumber(value: 1)
@@ -55,7 +54,7 @@ class Splish: CALayer {
         return scaleAnimation
     }
     
-    func createOpacityAnimation() -> CAKeyframeAnimation {
+    var createOpacityAnimation: CAKeyframeAnimation {
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = animationDuration
         opacityAnimation.keyTimes = [0,1.4, 1.5, 1,7, 1.8, 2]
@@ -68,7 +67,7 @@ class Splish: CALayer {
         self.animationGroup.repeatCount = Float(numberOfPulses)
         let defaultCurve = CAMediaTimingFunction(name: .default)
         self.animationGroup.timingFunction = defaultCurve
-        self.animationGroup.animations = [scaleAnimation(), createOpacityAnimation()]
+        self.animationGroup.animations = [scaleAnimation, createOpacityAnimation]
     }
     
 }
